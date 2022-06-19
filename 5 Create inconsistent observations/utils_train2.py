@@ -126,7 +126,6 @@ def mutate_params(*, normal_module: dict, module_used: str, task_name: str) -> D
     else:
         mutable_module_params = set(module.keys()).intersection(set(module_params.keys()))
 
-    print(module_params)
     if not mutable_module_params or module_used == 'command':
         # Adding a random parameter to the data
         if module_used not in module_parameters.keys():
